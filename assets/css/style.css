@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root{  /*dois pontos root para ser global*/
+    --primary-color: linear-gradient(90deg, rgb(95, 194, 95),rgb(53, 53, 163));  /*variavel global cor*/
+    --primary-color-dois: linear-gradient(90deg, rgb(53, 53, 163),rgb(95, 194, 95));
+}
+
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);   /*com a função var, esta utilizando a variável de cor global*/
+    font-family: 'Open sans', sans-serif; /*se não der primeira opção, ira ser sans-serif*/
+    font-size: 1.3em;  /*tamanho das letras*/
+    line-height: 1.5em;
+}
+
+h1 {
+    border: 5px solid;
+    border-radius: 10px;
+    color: #fff;  
+}
+
+.maior{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.div2{    
+    margin-left: 3rem;
+}
+
+p {
+    font-size: 1.3rem;   
+   
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+.container{   /*conteiner foi a classe dada para a section*/
+    max-width: 640px;    /*irá centralizar */
+    margin: 50px auto; /*distancia do container para a borda da pagina*/
+    background: #fff;  /*vai dar a cor de fundo para o conteiner*/
+    padding: 20px;  /*ira dar um distanciamento do texto para a borda para a borda do background*/
+    border-radius: 10px; /*vai deixar a borda do container mais arredondada*/
+   
+}
+form input, form label, form button{
+    display: block;
+    width: 100%; /*largura da pagina que estarão inseridos os forms*/
+    margin-bottom: 10px; /*espaçamento entre os elementos*/
+    border-radius: 12px;
+}
+form input{
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+form input :focus{
+    outline: 1px solid var(--primary-color);  /*serve para por cor de borda no input que for clicado*/
+}
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    height: 50px ;
+    cursor: pointer; /*vai deixar uma 'mãozinha' na quando o cursor chegar no botão*/
+    margin-top: 30px; /*distancia do botão para os inputs*/
+}
+form button:hover{
+    background: var(--primary-color-dois);
+}    
+form button :active{
+    background: red;
+}
+
+.paragrafo-result {         /*vai dar a cor verde se o resultado for bom*/
+    background-color: rgb(86, 202, 86);
+    padding: 9px 18px;
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.paragrafo-red{        /*caso nao seja digitado nada ou algo inválido*/
+    background-color: rgb(212, 97, 97);
+    padding: 9px 18px; 
+    color: #fff;
+    border-radius: 12px;
+    text-align: center;
+}
